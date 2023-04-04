@@ -59,8 +59,12 @@ main {
     margin-bottom: 10px;
 }
 
+.card100 h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .card100 p {
-    color: var(--card-text-color);
     font-size: 16px;
     line-height: 2;
     margin: 0;
@@ -351,6 +355,7 @@ ul {
 }
 
 .button {
+    margin-top: 20px;
     display: inline-block;
     background-color: var(--brand-action-colors);
     color: #fff;
