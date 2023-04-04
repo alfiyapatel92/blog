@@ -1,0 +1,349 @@
+/* Define variables for card colors and font family */
+:root {
+    --brand-bg-color: #FDF4F5;
+    --brand-box-bg-color: #C0DBEA;
+    --brand-box-heading-bg-color: #FFE1E1;
+    --brand-text-color-primary: #403c3c;
+    --brand-text-color-secondary: #505050;
+    --brand-action-colors: #AC7D88;
+    --card-background-color: #ffffff;
+    --card-border-color: #e2e8f0;
+    --card-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --card-text-color: #848c9b;
+    --card-heading-color: #2d3748;
+    --footer-background-color: #F2D1D1;
+    --footer-text-color: #4b4c48;
+    --font-family: 'Roboto', sans-serif;
+    --nav-background-color: #DAEAF1;
+    --nav-text-color: #fff;
+}
+
+/* Reset default styles and apply box-sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply font family to the whole page */
+body {
+    font-family: var(--font-family);
+    color: var(--brand-text-color-primary);
+}
+
+/* Style the main container */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    padding: 40px;
+    background-color: var(--brand-bg-color);
+}
+
+.card100 {
+    background-color: var(--card-background-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: 5px;
+    box-shadow: var(--card-box-shadow);
+    padding: 30px;
+    width: auto
+}
+
+
+.card100 h2 {
+    color: var(--card-heading-color);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.card100 p {
+    color: var(--card-text-color);
+    font-size: 16px;
+    line-height: 2;
+    margin: 0;
+}
+
+/* Add media query for smaller screens */
+@media screen and (max-width: 900px) {
+    main {
+        padding: 20px;
+    }
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    /* background-color: var(--nav-background-color);
+    color: var(--nav-text-color); */
+}
+
+.navWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    margin: 0;
+    font-size: 28px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 767px) {
+    .logo {
+        font-size: 24px;
+    }
+
+    .navWrapper {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    header .navWrapper {
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .menu-toggle span {
+        display: block;
+        height: 2px;
+        background-color: #333333;
+        margin-bottom: 5px;
+    }
+}
+
+/* Style the footer links */
+footer a {
+    color: var(--footer-text-color);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Style the footer links on hover */
+footer a:hover {
+    color: #cbd5e0;
+}
+
+/* Add media query for smaller screens */
+@media screen and (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer a {
+        margin-bottom: 10px;
+    }
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--footer-background-color);
+    color: var(--footer-text-color);
+    padding: 20px;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    margin-top: 50px;
+}
+
+.carousel-slide {
+    display: flex;
+    width: 300%;
+    height: 100%;
+}
+
+.carousel-slide img {
+    width: 33.33%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #f6f3f3;
+}
+
+/* Add media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .image-row-description {
+        flex-wrap: wrap;
+    }
+
+    footer a {
+        margin-bottom: 10px;
+    }
+}
+
+.wrapper {
+    row-gap: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+.image-row-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    font-size: 18px;
+    line-height: 1.5;
+    gap: 30px;
+}
+
+.image-row-description-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    font-size: 18px;
+    line-height: 1.5;
+    gap: 30px;
+}
+
+.image-row-description img {
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.shadow {
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+@media screen and (max-width: 767px) {
+    .wrapper {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .image-row-description {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-row-description img {
+        margin-right: 0;
+        margin-bottom: 0;
+        max-width: 100%;
+        object-fit: cover
+    }
+}
+
+.menopause-text {
+    flex: 1;
+    color: var(--brand-text-color-secondary);
+}
+
+.menopause-text h2 {
+    margin-bottom: 30px;
+}
+
+.menopause-text p {
+    color: var(--brand-text-color-secondary);
+    line-height: 1.5rem;
+}
+
+.menopause-image {
+    flex: 0.5;
+    height: 100%;
+}
+
+.sectionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.sectionContainer h1 {
+    letter-spacing: 0.3rem;
+    background-color: var(--brand-box-heading-bg-color);
+    padding: 20px;
+}
+
+.references,
+.disclaimer {
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+.references h3,
+.disclaimer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.references ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.references li {
+    margin-bottom: 0.5rem;
+}
+
+.references li a {
+    text-decoration: underline;
+}
+
+.disclaimer p {
+    font-size: 0.9rem;
+    margin: 0;
+}
